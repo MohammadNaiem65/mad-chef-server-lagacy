@@ -28,6 +28,11 @@ app.get("/chefs/chef/:id", (req, res) => {
 	res.send(chef);
 });
 
+app.get("/chefs/chef/recipes/:id", (req, res)=>{
+    const chef = chefs.find((chef) => chef.id == req.params.id);
+    res.send(chef.recipes);
+})
+
 app.listen(port, () => {
 	console.log(`Server running on ${port}`);
 });
