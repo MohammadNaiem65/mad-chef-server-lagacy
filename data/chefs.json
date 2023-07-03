@@ -3,11 +3,11 @@
 		"id": 1,
 		"name": "John Smith",
 		"picture": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-		"bio": "Chef John Smith is a renowned chef from New York City with a passion for creating innovative dishes that combine different cuisines. He believes in using fresh, locally sourced ingredients to deliver exceptional flavors.",
+		"bio": "Chef John Smith is a renowned chef from New York City with a passion for creating innovativedishes that combine different cuisines. He believes in using fresh, locally sourced ingredients to deliver exceptional flavors.",
 		"likes": 5000,
 		"yearsOfExperience": 15,
-		"availableRecipes": ["NYC Pizza", "Bagel with Lox", "Pastrami Sandwich"],
-		"newYorkCityDishes": [
+		"availableRecipes": ["NYC Pizza", "Empanadas", "Bagel with Lox", "Pastrami Sandwich"],
+		"dishes": [
 			{
 				"name": "NYC Pizza",
 				"picture": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -19,6 +19,18 @@
 					"Oregano"
 				],
 				"method": "Preheat the oven to 450°F. Roll out the pizza dough and spread tomato sauce evenly. Sprinkle mozzarella cheese over the sauce. Add pepperoni and sprinkle oregano. Bake in the oven for 12-15 minutes or until the crust is golden brown."
+			},
+			{
+				"name": "Empanadas",
+				"picture": "https://www.foodandwine.com/thmb/GhJJPDiWFknGb89Hz7Pa_-r9Dus=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sweet-potato-cheesecake-empanadas-FT-RECIPE0222-9a2b8c36ecad4e6bba8cd02e82e6df50.jpg",
+				"ingredients": [
+					"Ground beef",
+					"Onion",
+					"Bell pepper",
+					"Olives",
+					"Empanada dough"
+				],
+				"method": "Cook ground beef in a pan until browned. Add chopped onion and bell pepper and cook until softened. Season with salt, pepper, and spices. Remove from heat and stir in sliced olives. Roll out empanada dough and cut circles. Spoon a tablespoon of the beef filling onto each dough circle. Fold the dough in half and seal the edges by pressing with a fork. Bake the empanadas in a preheated oven at 375°F for 20-25 minutes or until golden brown."
 			},
 			{
 				"name": "Bagel with Lox",
@@ -50,11 +62,11 @@
 		"id": 2,
 		"name": "Emily Johnson",
 		"picture": "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-		"bio": "Chef Emily Johnson is a New York City native with a deep love for traditional family recipes passed down through generations. Her dishes reflect her heritage and dedication to preserving the rich culinary history of the city.",
+		"bio": "Chef Emily Johnson is a New York City native with a deep love for traditional family recipes passed down through generations. Herdishes reflect her heritage and dedication to preserving the rich culinary history of the city.",
 		"likes": 3500,
 		"yearsOfExperience": 12,
-		"availableRecipes": ["Chicken and Waffles", "Egg Cream", "Reuben Sandwich"],
-		"newYorkCityDishes": [
+		"availableRecipes": ["Chicken and Waffles", "Egg Cream", "Reuben Sandwich", "Grilled Octopus"],
+		"dishes": [
 			{
 				"name": "Chicken and Waffles",
 				"picture": "https://images.unsplash.com/photo-1600891963935-9e9544daf776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
@@ -84,6 +96,12 @@
 					"Thousand Island dressing"
 				],
 				"method": "Toast two slices of rye bread. Layer corned beef, Swiss cheese, and sauerkraut on one slice of bread. Spread Thousand Island dressing on the other slice. Place the other slice of bread on top and serve."
+			},
+			{
+				"name": "Grilled Octopus",
+				"picture": "https://images.unsplash.com/photo-1526243070121-8040f7c9cc1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+				"ingredients": ["Octopus", "Olive oil", "Lemon", "Garlic", "Paprika"],
+				"method": "Preheat the grill to medium-high heat. Clean the octopus and remove the beak. Cook the octopus in boiling water for 45 minutes or until tender. Remove the octopus from the water and let it cool. Cut the tentacles into smaller pieces. Drizzle olive oil, lemon juice, minced garlic, and paprika over the octopus. Grill the octopus for 2-3 minutes per side. Serve with lemon wedges and drizzle with more olive oil if desired."
 			}
 		]
 	},
@@ -91,15 +109,17 @@
 		"id": 3,
 		"name": "Sarah Thompson",
 		"picture": "https://images.unsplash.com/photo-1543876020-fa0e86833073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-		"bio": "Chef Sarah Thompson is a passionate chef specializing in New York City street food. With her creative touch, she turns simple ingredients into flavorful dishes that capture the essence of the city streets.",
+		"bio": "Chef Sarah Thompson is a passionate chef specializing in New York City street food. With her creative touch, she turns simple ingredients into flavorfuldishes that capture the essence of the city streets.",
 		"likes": 4200,
 		"yearsOfExperience": 10,
 		"availableRecipes": [
 			"Hot Dog with Sauerkraut",
+			"Ceviche",
+			"Pad Thai",
 			"Soft Pretzel",
 			"Halal Chicken and Rice"
 		],
-		"newYorkCityDishes": [
+		"dishes": [
 			{
 				"name": "Hot Dog with Sauerkraut",
 				"picture": "https://www.thespruceeats.com/thmb/-6emp_UTM-ttxrvkTnxUYPr9cqs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sauerkraut-hot-dog-topping-recipe-335384-hero-01-38befcd524f74313a35b411f0273f543.jpg",
@@ -111,6 +131,30 @@
 					"Ketchup"
 				],
 				"method": "Cook the beef hot dog according to package instructions. Place the cooked hot dog inside the hot dog bun. Top with sauerkraut, mustard, and ketchup. Serve hot."
+			},
+			{
+				"name": "Ceviche",
+				"picture": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+				"ingredients": [
+					"Fish fillets",
+					"Lime juice",
+					"Red onion",
+					"Cilantro",
+					"Avocado"
+				],
+				"method": "Dice fish fillets into small pieces. Place the fish in a bowl and add lime juice. Let the fish marinate in the lime juice for about 20 minutes or until it turns opaque. Drain the excess lime juice. Add diced red onion, chopped cilantro, and diced avocado to the fish. Mix well and refrigerate for 30 minutes. Serve chilled."
+			},
+			{
+				"name": "Pad Thai",
+				"picture": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+				"ingredients": [
+					"Rice noodles",
+					"Shrimp",
+					"Tofu",
+					"Bean sprouts",
+					"Peanuts"
+				],
+				"method": "Cook rice noodles according to package instructions. Heat oil in a pan and add shrimp and tofu. Stir-fry until the shrimp is cooked through. Push the shrimp and tofu to one side of the pan and crack an egg on the other side. Scramble the egg and mix it with the shrimp and tofu. Add cooked rice noodles, bean sprouts, peanuts, and sauce. Toss everything together until well combined. Serve hot with lime wedges and extra peanuts for garnish."
 			},
 			{
 				"name": "Soft Pretzel",
@@ -136,11 +180,11 @@
 		"id": 4,
 		"name": "Michael Rodriguez",
 		"picture": "https://plus.unsplash.com/premium_photo-1673830185552-45cd9d2fba48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-		"bio": "Chef Michael Rodriguez is a master of seafood dishes with a modern twist. Inspired by the vibrant seafood markets of New York City, he creates flavorful and visually stunning dishes that showcase the best of the ocean.",
+		"bio": "Chef Michael Rodriguez is a master of seafooddishes with a modern twist. Inspired by the vibrant seafood markets of New York City, he creates flavorful and visually stunningdishes that showcase the best of the ocean.",
 		"likes": 6000,
 		"yearsOfExperience": 20,
 		"availableRecipes": ["Lobster Roll", "Clam Chowder", "Grilled Octopus"],
-		"newYorkCityDishes": [
+		"dishes": [
 			{
 				"name": "Lobster Roll",
 				"picture": "https://images.unsplash.com/photo-1603103750903-518e8bf57bf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -171,16 +215,28 @@
 		"id": 5,
 		"name": "Sophia Lee",
 		"picture": "https://images.unsplash.com/photo-1601341348280-550b5e87281b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-		"bio": "Chef Sophia Lee is an expert in Korean cuisine, infusing traditional Korean flavors into contemporary dishes. She takes pride in introducing the vibrant and diverse culinary traditions of Korea to the people of New York City.",
+		"bio": "Chef Sophia Lee is an expert in Korean cuisine, infusing traditional Korean flavors into contemporarydishes. She takes pride in introducing the vibrant and diverse culinary traditions of Korea to the people of New York City.",
 		"likes": 4500,
 		"yearsOfExperience": 10,
-		"availableRecipes": ["Bibimbap", "Korean Fried Chicken", "Kimchi Pancakes"],
-		"newYorkCityDishes": [
+		"availableRecipes": ["Bibimbap", "Dumplings", "Korean Fried Chicken", "Kimchi Pancakes"],
+		"dishes": [
 			{
 				"name": "Bibimbap",
 				"picture": "https://images.unsplash.com/photo-1553163147-622ab57be1c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
 				"ingredients": ["Rice", "Beef", "Carrots", "Spinach", "Bean sprouts"],
 				"method": "Cook rice according to package instructions. Marinate beef in a mixture of soy sauce, sugar, garlic, and sesame oil. Sauté carrots, spinach, and bean sprouts separately. Cook the marinated beef in a hot skillet. Assemble the bibimbap by placing rice at the bottom of a bowl, then arrange the cooked vegetables and beef on top. Serve with gochujang sauce and mix well before eating."
+			},
+			{
+				"name": "Dumplings",
+				"picture": "https://www.seriouseats.com/thmb/4sQ_PSwAk3NI3DiLwFkA0dESLIo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Soup_Dumplings_hero-AntonisAchilleos-4de81e0b74dd4e7690aea42918eb97ef.JPG",
+				"ingredients": [
+					"Ground pork",
+					"Cabbage",
+					"Ginger",
+					"Garlic",
+					"Wonton wrappers"
+				],
+				"method": "Mix ground pork, chopped cabbage, grated ginger, minced garlic, and soy sauce in a bowl. Place a spoonful of the mixture in the center of a wonton wrapper. Wet the edges of the wrapper and fold it in half to form a triangle. Seal the edges by pressing firmly. Bring a pot of water to a boil. Drop the dumplings into the boiling water and cook until they float to the surface. Remove the dumplings from the water and serve with dipping sauce."
 			},
 			{
 				"name": "Korean Fried Chicken",
@@ -210,11 +266,31 @@
 		"likes": 5200,
 		"yearsOfExperience": 18,
 		"availableRecipes": [
+			"Chicken and Waffles",
+			"General Tso's Chicken",
 			"New York Cheesecake",
 			"Black and White Cookies",
 			"Cannoli"
 		],
-		"newYorkCityDishes": [
+		"dishes": [
+			{
+				"name": "Chicken and Waffles",
+				"picture": "https://images.unsplash.com/photo-1600891963935-9e9544daf776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+				"ingredients": [
+					"Fried chicken",
+					"Waffles",
+					"Maple syrup",
+					"Butter",
+					"Hot sauce"
+				],
+				"method": "Fry the chicken until golden brown and crispy. Prepare waffles according to the recipe. Serve the fried chicken on top of the waffles. Drizzle with maple syrup and melted butter. Add hot sauce if desired."
+			},
+            {
+				"name": "General Tso's Chicken",
+				"picture": "https://www.allrecipes.com/thmb/XEHrCbobZ3Ne1UBCEgZ3oAZ6AOs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/91499-GeneralTsaosChickenII-2X3-0726-11684f5673c448e4902ede18abab2abd.jpg",
+				"ingredients": ["Chicken", "Soy sauce", "Sugar", "Garlic", "Ginger"],
+				"method": "Marinate chicken in a mixture of soy sauce, sugar, garlic, and ginger. Fry the marinated chicken until crispy. Drain excess oil and set aside. In a separate pan, heat soy sauce, sugar, garlic, and ginger to make the sauce. Add the crispy chicken to the sauce and toss to coat. Serve hot with steamed rice."
+			},
 			{
 				"name": "New York Cheesecake",
 				"picture": "https://img.taste.com.au/iR8QZWfm/w720-h480-cfill-q80/taste/2016/11/new-york-cheesecake-40742-1.jpeg",
@@ -251,11 +327,11 @@
 		"id": 7,
 		"name": "Jessica Chen",
 		"picture": "https://plus.unsplash.com/premium_photo-1679090007194-66b942df92bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80",
-		"bio": "Chef Jessica Chen is a master of Asian fusion cuisine. With her background in both Chinese and Thai cooking, she creates unique and harmonious dishes that blend the flavors and techniques of both culinary traditions.",
+		"bio": "Chef Jessica Chen is a master of Asian fusion cuisine. With her background in both Chinese and Thai cooking, she creates unique and harmoniousdishes that blend the flavors and techniques of both culinary traditions.",
 		"likes": 3800,
 		"yearsOfExperience": 14,
 		"availableRecipes": ["General Tso's Chicken", "Pad Thai", "Dumplings"],
-		"newYorkCityDishes": [
+		"dishes": [
 			{
 				"name": "General Tso's Chicken",
 				"picture": "https://www.allrecipes.com/thmb/XEHrCbobZ3Ne1UBCEgZ3oAZ6AOs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/91499-GeneralTsaosChickenII-2X3-0726-11684f5673c448e4902ede18abab2abd.jpg",
@@ -292,11 +368,11 @@
 		"id": 8,
 		"name": "Daniel Garcia",
 		"picture": "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
-		"bio": "Chef Daniel Garcia is a master of Latin American cuisine. With his deep knowledge of the diverse flavors and cooking techniques of the region, he creates dishes that celebrate the richness and vibrancy of Latin American culture.",
+		"bio": "Chef Daniel Garcia is a master of Latin American cuisine. With his deep knowledge of the diverse flavors and cooking techniques of the region, he createsdishes that celebrate the richness and vibrancy of Latin American culture.",
 		"likes": 4700,
 		"yearsOfExperience": 12,
 		"availableRecipes": ["Tacos al Pastor", "Ceviche", "Empanadas"],
-		"newYorkCityDishes": [
+		"dishes": [
 			{
 				"name": "Tacos al Pastor",
 				"picture": "https://images.unsplash.com/photo-1613409385222-3d0decb6742a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -308,18 +384,6 @@
 					"Corn tortillas"
 				],
 				"method": "Marinate pork shoulder in a mixture of pineapple juice, achiote paste, garlic, and spices. Grill the marinated pork until cooked through. Chop the grilled pork into small pieces. Heat corn tortillas on a griddle. Fill each tortilla with the chopped pork, diced pineapple, chopped onion, and cilantro. Serve hot."
-			},
-			{
-				"name": "Ceviche",
-				"picture": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-				"ingredients": [
-					"Fish fillets",
-					"Lime juice",
-					"Red onion",
-					"Cilantro",
-					"Avocado"
-				],
-				"method": "Dice fish fillets into small pieces. Place the fish in a bowl and add lime juice. Let the fish marinate in the lime juice for about 20 minutes or until it turns opaque. Drain the excess lime juice. Add diced red onion, chopped cilantro, and diced avocado to the fish. Mix well and refrigerate for 30 minutes. Serve chilled."
 			},
 			{
 				"name": "Empanadas",
