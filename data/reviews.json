@@ -2,42 +2,42 @@
 	{
 		"id": 1,
 		"name": "Sophia",
-		"image": "https://example.com/images/sophia.jpg",
+		"image": "https://www.researchgate.net/profile/Oliver-Korn-2/publication/326009520/figure/fig4/AS:642031240105985@1530083584231/The-Sophia-Robot-first-shown-in-2015-by-Hanson-Robotics-Courtesy-of-Hanson-Robotics.png",
 		"review": "I made a delicious spicy chicken tacos recipe and it turned out great! The chicken was perfectly seasoned and the spice level was just right.",
 		"rating": 4.8
 	},
 	{
 		"id": 2,
 		"name": "Oliver",
-		"image": "https://example.com/images/oliver.jpg",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Olivia_Rodrigo_at_Vice_President%27s_West_Wing_office_%282%29.jpg/330px-Olivia_Rodrigo_at_Vice_President%27s_West_Wing_office_%282%29.jpg",
 		"review": "I tried making a mushroom risotto for the first time and it turned out great! The mushrooms added a nice earthy flavor and the texture was perfect.",
 		"rating": 4.5
 	},
 	{
 		"id": 3,
 		"name": "Emma",
-		"image": "https://example.com/images/emma.jpg",
+		"image": "https://media.voguebusiness.com/photos/627a367a039eed522a033871/2:3/w_2560%2Cc_limit/modesst-fashion-inf-voguebus-apr-22-lucy-alcorn-story.jpg",
 		"review": "I made a delicious beef stir fry for dinner and it was amazing! The beef was tender and the vegetables were perfectly cooked.",
 		"rating": 4.7
 	},
 	{
 		"id": 4,
 		"name": "William",
-		"image": "https://example.com/images/william.jpg",
+		"image": "https://imgs.smoothradio.com/images/224058?crop=16_9&width=660&relax=1&format=webp&signature=tJJUscVJVDkncTccZpVZiphORB4=",
 		"review": "I made a pesto pasta salad for lunch and it was so flavorful! The pesto added a nice herbiness and the cherry tomatoes were a great touch.",
 		"rating": 4.3
 	},
 	{
 		"id": 5,
 		"name": "Ava",
-		"image": "https://example.com/images/ava.jpg",
+		"image": "https://cdn.cliqueinc.com/posts/228746/modest-fashion-228746-1650637007518-image.600x0c.jpg?interlace=true&quality=70",
 		"review": "I made a delicious vegetarian chili for dinner and it was hearty and flavorful! The combination of beans, vegetables, and spices made for a delicious and healthy meal.",
 		"rating": 4.6
 	},
 	{
 		"id": 6,
 		"name": "Henry",
-		"image": "https://example.com/images/henry.jpg",
+		"image": "https://i.guim.co.uk/img/media/21f4eb902cc4fe56dd2378adb83d4eef49b0fbe6/0_0_4966_2979/master/4966.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d81de456b25007c739555f1e064bab5f",
 		"review": "I made a salmon with lemon butter sauce for dinner and it was amazing! The salmon was perfectly cooked and the lemon butter sauce was a great complement.",
 		"rating": 4.9
 	}

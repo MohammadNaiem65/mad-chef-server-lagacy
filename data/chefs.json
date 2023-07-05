@@ -4,7 +4,7 @@
 		"name": "John Smith",
 		"picture": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
 		"bio": "Chef John Smith is a renowned chef from New York City with a passion for creating innovativerecipes that combine different cuisines. He believes in using fresh, locally sourced ingredients to deliver exceptional flavors.",
-		"likes": 5000,
+		"rating": 4.7,
 		"yearsOfExperience": 15,
 		"availableRecipes": [
 			"NYC Pizza",
@@ -76,7 +76,7 @@
 		"name": "Emily Johnson",
 		"picture": "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
 		"bio": "Chef Emily Johnson is a New York City native with a deep love for traditional family recipes passed down through generations. Herrecipes reflect her heritage and dedication to preserving the rich culinary history of the city.",
-		"likes": 3500,
+		"rating": 4.2,
 		"yearsOfExperience": 12,
 		"availableRecipes": [
 			"Chicken and Waffles",
@@ -136,7 +136,7 @@
 		"name": "Sarah Thompson",
 		"picture": "https://images.unsplash.com/photo-1543876020-fa0e86833073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
 		"bio": "Chef Sarah Thompson is a passionate chef specializing in New York City street food. With her creative touch, she turns simple ingredients into flavorfulrecipes that capture the essence of the city streets.",
-		"likes": 4200,
+		"rating": 4.5,
 		"yearsOfExperience": 10,
 		"availableRecipes": [
 			"Hot Dog with Sauerkraut",
@@ -217,7 +217,7 @@
 		"name": "Michael Rodriguez",
 		"picture": "https://plus.unsplash.com/premium_photo-1673830185552-45cd9d2fba48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
 		"bio": "Chef Michael Rodriguez is a master of seafoodrecipes with a modern twist. Inspired by the vibrant seafood markets of New York City, he creates flavorful and visually stunningrecipes that showcase the best of the ocean.",
-		"likes": 6000,
+		"rating": 4.7,
 		"yearsOfExperience": 20,
 		"availableRecipes": ["Lobster Roll", "Clam Chowder", "Grilled Octopus"],
 		"recipes": [
@@ -258,7 +258,7 @@
 		"name": "Sophia Lee",
 		"picture": "https://images.unsplash.com/photo-1601341348280-550b5e87281b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
 		"bio": "Chef Sophia Lee is an expert in Korean cuisine, infusing traditional Korean flavors into contemporaryrecipes. She takes pride in introducing the vibrant and diverse culinary traditions of Korea to the people of New York City.",
-		"likes": 4500,
+		"rating": 4.6,
 		"yearsOfExperience": 10,
 		"availableRecipes": [
 			"Bibimbap",
@@ -318,7 +318,7 @@
 		"name": "David Miller",
 		"picture": "https://images.unsplash.com/photo-1542909192-2f2241a99c9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
 		"bio": "Chef David Miller is a pastry chef known for his exquisite desserts. With a background in fine dining, he brings elegance and creativity to his sweet creations, capturing the hearts and palates of New York City dessert lovers.",
-		"likes": 5200,
+		"rating": 4.8,
 		"yearsOfExperience": 18,
 		"availableRecipes": [
 			"Chicken and Waffles",
@@ -393,7 +393,7 @@
 		"name": "Jessica Chen",
 		"picture": "https://plus.unsplash.com/premium_photo-1679090007194-66b942df92bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80",
 		"bio": "Chef Jessica Chen is a master of Asian fusion cuisine. With her background in both Chinese and Thai cooking, she creates unique and harmoniousrecipes that blend the flavors and techniques of both culinary traditions.",
-		"likes": 3800,
+		"rating": 4.7,
 		"yearsOfExperience": 14,
 		"availableRecipes": ["General Tso's Chicken", "Pad Thai", "Dumplings"],
 		"recipes": [
@@ -440,7 +440,7 @@
 		"name": "Daniel Garcia",
 		"picture": "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
 		"bio": "Chef Daniel Garcia is a master of Latin American cuisine. With his deep knowledge of the diverse flavors and cooking techniques of the region, he createsrecipes that celebrate the richness and vibrancy of Latin American culture.",
-		"likes": 4700,
+		"rating": 4.9,
 		"yearsOfExperience": 12,
 		"availableRecipes": [
 			"Bibimbap",
