@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"name": "Sophia",
+		"image": "https://example.com/images/sophia.jpg",
+		"review": "I made a delicious spicy chicken tacos recipe and it turned out great! The chicken was perfectly seasoned and the spice level was just right.",
+		"rating": 4.8
+	},
+	{
+		"id": 2,
+		"name": "Oliver",
+		"image": "https://example.com/images/oliver.jpg",
+		"review": "I tried making a mushroom risotto for the first time and it turned out great! The mushrooms added a nice earthy flavor and the texture was perfect.",
+		"rating": 4.5
+	},
+	{
+		"id": 3,
+		"name": "Emma",
+		"image": "https://example.com/images/emma.jpg",
+		"review": "I made a delicious beef stir fry for dinner and it was amazing! The beef was tender and the vegetables were perfectly cooked.",
+		"rating": 4.7
+	},
+	{
+		"id": 4,
+		"name": "William",
+		"image": "https://example.com/images/william.jpg",
+		"review": "I made a pesto pasta salad for lunch and it was so flavorful! The pesto added a nice herbiness and the cherry tomatoes were a great touch.",
+		"rating": 4.3
+	},
+	{
+		"id": 5,
+		"name": "Ava",
+		"image": "https://example.com/images/ava.jpg",
+		"review": "I made a delicious vegetarian chili for dinner and it was hearty and flavorful! The combination of beans, vegetables, and spices made for a delicious and healthy meal.",
+		"rating": 4.6
+	},
+	{
+		"id": 6,
+		"name": "Henry",
+		"image": "https://example.com/images/henry.jpg",
+		"review": "I made a salmon with lemon butter sauce for dinner and it was amazing! The salmon was perfectly cooked and the lemon butter sauce was a great complement.",
+		"rating": 4.9
+	}
+]
