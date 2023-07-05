@@ -35,6 +35,11 @@ app.get("/chefs/chef/recipes/:id", (req, res) => {
 	res.send(chef.recipes);
 });
 
+app.get("/top-chefs", (req, res) => {
+	const sortedValues = chefs.toSorted((a, b) => b.rating - a.rating);
+	res.send(sortedValues);
+});
+
 app.get("/reviews", (req, res) => {
 	res.send(reviews);
 });
