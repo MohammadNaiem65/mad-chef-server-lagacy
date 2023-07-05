@@ -36,7 +36,8 @@ app.get("/chefs/chef/recipes/:id", (req, res) => {
 });
 
 app.get("/top-chefs", (req, res) => {
-	const sortedValues = chefs.toSorted((a, b) => b.rating - a.rating);
+	const chefsCopy = chefs;
+	const sortedValues = chefsCopy.sort((a, b) => b.rating - a.rating);
 	res.send(sortedValues);
 });
 
