@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const chefs = require('./data/chefs.json');
 const reviews = require('./data/reviews.json');
 
 const app = express();
 const port = 5000;
 app.use(cors());
+app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@madchef.30s9xap.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -64,10 +65,11 @@ function run() {
 		});
 
 		// * Users related api
-		app.get('/user/favorites', async (req, res) => {
-			const email = req.query.email;
+		app.post('/users/user', async (req, res) => {
+			const userData = req.body;
 
-			console.log(email);
+			const result = await usersCollection.insertOne(userData);
+			res.send(result);
 		});
 
 		// * Review related api
