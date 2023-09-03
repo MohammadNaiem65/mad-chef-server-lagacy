@@ -72,16 +72,34 @@ function run() {
 			res.send(result);
 		});
 
+		app.get('/users/user/check', async (req, res) => {
+			const email = req.query.email;
+
+			const result = await usersCollection.findOne({ email });
+			if (result) {
+				console.log(result);
+				return res.send({ exist: true });
+			} else {
+				console.log(result);
+				return res.send({ exist: false });
+			}
+		});
+
+		app.get('/users/user/favorites', async (req, res) => {
+			const email = req.query.email;
+
+			const result = await usersCollection.findOne({ email });
+			if (result) {
+				res.send({ favorites: result.favorites });
+			} else {
+				res.send({ favorites: [] });
+			}
+		});
+
 		// * Review related api
 		app.get('/reviews', (req, res) => {
 			res.send(reviews);
 		});
-
-		// Send a ping to confirm a successful connection
-		// client.db('admin').command({ ping: 1 });
-		// console.log(
-		// 	'Pinged your deployment. You successfully connected to MongoDB!'
-		// );
 	} catch (err) {
 		console.error(err);
 	}
