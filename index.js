@@ -20,65 +20,71 @@ const client = new MongoClient(uri, {
 	},
 });
 
-try {
-	// Connect the client to the server	(optional starting in v4.7)
-	client.connect();
+function run() {
+	try {
+		// Connect the client to the server	(optional starting in v4.7)
+		client.connect();
+		const db = client.db('madChef');
 
-	const db = client.db('madChef');
-	const usersCollection = db.collection('users');
+		// ! Get the collections
+		const usersCollection = db.collection('users');
 
-	// * Users related api
-	app.get('/user/favorites', async (req, res) => {
-		const email = req.query.email;
+		// * Chef related api
+		app.get('/chefs', (req, res) => {
+			res.send(chefs);
+		});
 
-		console.log(email);
-	});
+		app.get('/chefs/name', (req, res) => {
+			const names = [];
+			chefs.forEach((chef) => {
+				let cName = {
+					id: chef.id,
+					name: chef.name,
+					availableRecipes: chef.availableRecipes.length,
+				};
+				names.push(cName);
+			});
+			res.send(names);
+		});
 
-	// Send a ping to confirm a successful connection
-	client.db('admin').command({ ping: 1 });
-	console.log(
-		'Pinged your deployment. You successfully connected to MongoDB!'
-	);
-} catch (err) {
-	console.error(err);
+		app.get('/chefs/chef/:id', (req, res) => {
+			const chef = chefs.find((chef) => chef.id == req.params.id);
+			res.send(chef);
+		});
+
+		app.get('/chefs/chef/recipes/:id', (req, res) => {
+			const chef = chefs.find((chef) => chef.id == req.params.id);
+			res.send(chef.recipes);
+		});
+
+		app.get('/top-chefs', (req, res) => {
+			const chefsCopy = chefs;
+			const sortedValues = chefsCopy.sort((a, b) => b.rating - a.rating);
+			res.send(sortedValues);
+		});
+
+		// * Users related api
+		app.get('/user/favorites', async (req, res) => {
+			const email = req.query.email;
+
+			console.log(email);
+		});
+
+		// * Review related api
+		app.get('/reviews', (req, res) => {
+			res.send(reviews);
+		});
+
+		// Send a ping to confirm a successful connection
+		// client.db('admin').command({ ping: 1 });
+		// console.log(
+		// 	'Pinged your deployment. You successfully connected to MongoDB!'
+		// );
+	} catch (err) {
+		console.error(err);
+	}
 }
-
-app.get('/chefs', (req, res) => {
-	res.send(chefs);
-});
-
-app.get('/chefs/name', (req, res) => {
-	const names = [];
-	chefs.forEach((chef) => {
-		let cName = {
-			id: chef.id,
-			name: chef.name,
-			availableRecipes: chef.availableRecipes.length,
-		};
-		names.push(cName);
-	});
-	res.send(names);
-});
-
-app.get('/chefs/chef/:id', (req, res) => {
-	const chef = chefs.find((chef) => chef.id == req.params.id);
-	res.send(chef);
-});
-
-app.get('/chefs/chef/recipes/:id', (req, res) => {
-	const chef = chefs.find((chef) => chef.id == req.params.id);
-	res.send(chef.recipes);
-});
-
-app.get('/top-chefs', (req, res) => {
-	const chefsCopy = chefs;
-	const sortedValues = chefsCopy.sort((a, b) => b.rating - a.rating);
-	res.send(sortedValues);
-});
-
-app.get('/reviews', (req, res) => {
-	res.send(reviews);
-});
+run();
 
 app.listen(port, () => {
 	console.log(`Server running on ${port}`);
