@@ -20,30 +20,28 @@ const client = new MongoClient(uri, {
 	},
 });
 
-async function run() {
-	try {
-		// Connect the client to the server	(optional starting in v4.7)
-		await client.connect();
+try {
+	// Connect the client to the server	(optional starting in v4.7)
+	await client.connect();
 
-		const db = client.db('madChef');
-		const usersCollection = db.collection('users');
+	const db = client.db('madChef');
+	const usersCollection = db.collection('users');
 
-		// * Users related api
-		app.get('/user/favorites', async (req, res) => {
-			const email = req.query.email;
+	// * Users related api
+	app.get('/user/favorites', async (req, res) => {
+		const email = req.query.email;
 
-			console.log(email);
-		});
+		console.log(email);
+	});
 
-		// Send a ping to confirm a successful connection
-		await client.db('admin').command({ ping: 1 });
-		console.log(
-			'Pinged your deployment. You successfully connected to MongoDB!'
-		);
-	} finally {
-	}
+	// Send a ping to confirm a successful connection
+	await client.db('admin').command({ ping: 1 });
+	console.log(
+		'Pinged your deployment. You successfully connected to MongoDB!'
+	);
+} catch (err) {
+	console.error(err);
 }
-run().catch(console.dir);
 
 app.get('/chefs', (req, res) => {
 	res.send(chefs);
