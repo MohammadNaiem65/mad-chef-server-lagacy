@@ -28,6 +28,7 @@ function run() {
 		// ! Get the collections
 		const chefsCollection = db.collection('chefs');
 		const usersCollection = db.collection('users');
+		const recipesCollection = db.collection('recipes');
 		const reviewCollection = db.collection('reviews');
 
 		// * Chef related api
@@ -37,32 +38,27 @@ function run() {
 		});
 
 		app.get('/chefs/name', async (req, res) => {
-			const names = [];
-			const chefs = await chefsCollection.find().toArray();
-			chefs.forEach((chef) => {
-				let cName = {
-					id: chef.id,
-					name: chef.name,
-					availableRecipes: chef.availableRecipes.length,
-				};
-				names.push(cName);
-			});
-			res.send(names);
+			const options = {
+				projection: { _id: 1, name: 1, availableRecipes: 1 },
+			};
+
+			const chefsNames = await chefsCollection
+				.find({}, options)
+				.toArray();
+			res.send(chefsNames);
 		});
 
 		app.get('/chefs/chef/:id', async (req, res) => {
-			const chef = await chefsCollection.findOne({
-				id: parseInt(req.params.id),
-			});
+			const _id = new ObjectId(req.params.id);
+			const chef = await chefsCollection.findOne({ _id });
 			res.send(chef);
 		});
 
 		app.get('/chefs/chef/recipes/:id', async (req, res) => {
-			const id = parseInt(req.params.id);
-			const options = { projection: { recipes: 1, _id: 0 } };
+			const chef_id = req.params.id;
 
-			const recipes = await chefsCollection.findOne({ id }, options);
-			res.send(recipes.recipes);
+			const recipes = await recipesCollection.find({ chef_id }).toArray();
+			res.send(recipes);
 		});
 
 		app.get('/top-chefs', async (req, res) => {
@@ -86,6 +82,7 @@ function run() {
 			const userData = req.body;
 
 			const result = await usersCollection.insertOne(userData);
+			console.log(userData, result);
 			res.send(result);
 		});
 
@@ -104,10 +101,16 @@ function run() {
 
 		app.get('/users/user/favorites', async (req, res) => {
 			const email = req.query.email;
+			const options = {
+				projection: {
+					favorites: 1,
+					_id: 0,
+				},
+			};
 
-			const result = await usersCollection.findOne({ email });
+			const result = await usersCollection.findOne({ email }, options);
 			if (result) {
-				res.send({ favorites: result.favorites });
+				res.send(result);
 			} else {
 				res.send({ favorites: [] });
 			}
