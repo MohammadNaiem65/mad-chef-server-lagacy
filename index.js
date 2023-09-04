@@ -2,8 +2,6 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const chefs = require('./data/chefs.json');
-const reviews = require('./data/reviews.json');
 
 const app = express();
 const port = 5000;
@@ -28,15 +26,19 @@ function run() {
 		const db = client.db('madChef');
 
 		// ! Get the collections
+		const chefsCollection = db.collection('chefs');
 		const usersCollection = db.collection('users');
+		const reviewCollection = db.collection('reviews');
 
 		// * Chef related api
-		app.get('/chefs', (req, res) => {
+		app.get('/chefs', async (req, res) => {
+			const chefs = await chefsCollection.find().toArray();
 			res.send(chefs);
 		});
 
-		app.get('/chefs/name', (req, res) => {
+		app.get('/chefs/name', async (req, res) => {
 			const names = [];
+			const chefs = await chefsCollection.find().toArray();
 			chefs.forEach((chef) => {
 				let cName = {
 					id: chef.id,
@@ -48,20 +50,35 @@ function run() {
 			res.send(names);
 		});
 
-		app.get('/chefs/chef/:id', (req, res) => {
-			const chef = chefs.find((chef) => chef.id == req.params.id);
+		app.get('/chefs/chef/:id', async (req, res) => {
+			const chef = await chefsCollection.findOne({
+				id: parseInt(req.params.id),
+			});
 			res.send(chef);
 		});
 
-		app.get('/chefs/chef/recipes/:id', (req, res) => {
-			const chef = chefs.find((chef) => chef.id == req.params.id);
-			res.send(chef.recipes);
+		app.get('/chefs/chef/recipes/:id', async (req, res) => {
+			const id = parseInt(req.params.id);
+			const options = { projection: { recipes: 1, _id: 0 } };
+
+			const recipes = await chefsCollection.findOne({ id }, options);
+			res.send(recipes.recipes);
 		});
 
-		app.get('/top-chefs', (req, res) => {
-			const chefsCopy = chefs;
-			const sortedValues = chefsCopy.sort((a, b) => b.rating - a.rating);
-			res.send(sortedValues);
+		app.get('/top-chefs', async (req, res) => {
+			const topChefs = await chefsCollection
+				.aggregate([
+					{
+						$sort: {
+							rating: -1,
+						},
+					},
+					{
+						$limit: 6,
+					},
+				])
+				.toArray();
+			res.send(topChefs);
 		});
 
 		// * Users related api
@@ -97,7 +114,8 @@ function run() {
 		});
 
 		// * Review related api
-		app.get('/reviews', (req, res) => {
+		app.get('/reviews', async (req, res) => {
+			const reviews = await reviewCollection.find().toArray();
 			res.send(reviews);
 		});
 	} catch (err) {
