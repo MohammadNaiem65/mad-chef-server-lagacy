@@ -116,6 +116,18 @@ function run() {
 			}
 		});
 
+		app.patch('/users/user/favorites/:id', async (req, res) => {
+			const id = req.params.id;
+			const email = req.query.email;
+			const result = await usersCollection.updateOne(
+				{ email },
+				{ $addToSet: { favorites: id } }
+			);
+
+			console.log(result);
+			res.send(result);
+		});
+
 		// * Review related api
 		app.get('/reviews', async (req, res) => {
 			const reviews = await reviewCollection.find().toArray();
