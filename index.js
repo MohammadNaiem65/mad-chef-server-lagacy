@@ -21,7 +21,7 @@ const client = new MongoClient(uri, {
 
 function run() {
 	try {
-		// Connect the client to the server	(optional starting in v4.7)
+		// Connect the client to the server
 		client.connect();
 		const db = client.db('madChef');
 
@@ -30,6 +30,7 @@ function run() {
 		const usersCollection = db.collection('users');
 		const recipesCollection = db.collection('recipes');
 		const reviewCollection = db.collection('reviews');
+		const consultCollection = db.collection('consults');
 
 		// * Chef related api
 		app.get('/chefs', async (req, res) => {
@@ -132,6 +133,21 @@ function run() {
 		app.get('/reviews', async (req, res) => {
 			const reviews = await reviewCollection.find().toArray();
 			res.send(reviews);
+		});
+
+		// * Consult related api
+		app.get('/consult', async (req, res) => {
+			const email = req.query.email;
+
+			const result = await consultCollection.find({ email }).toArray();
+			res.send(result);
+		});
+
+		app.post('/consult', async (req, res) => {
+			const details = req.body;
+
+			const result = await consultCollection.insertOne(details);
+			res.send(result);
 		});
 	} catch (err) {
 		console.error(err);
