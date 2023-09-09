@@ -83,7 +83,6 @@ function run() {
 			const userData = req.body;
 
 			const result = await usersCollection.insertOne(userData);
-			console.log(userData, result);
 			res.send(result);
 		});
 
@@ -125,7 +124,6 @@ function run() {
 				{ $addToSet: { favorites: id } }
 			);
 
-			console.log(result);
 			res.send(result);
 		});
 
@@ -138,8 +136,16 @@ function run() {
 		// * Consult related api
 		app.get('/consult', async (req, res) => {
 			const email = req.query.email;
+			const options = {
+				projection: {
+					date: 1,
+					time: 1,
+				},
+			};
 
-			const result = await consultCollection.find({ email }).toArray();
+			const result = await consultCollection
+				.find({ email }, options)
+				.toArray();
 			res.send(result);
 		});
 
@@ -147,6 +153,12 @@ function run() {
 			const details = req.body;
 
 			const result = await consultCollection.insertOne(details);
+			res.send(result);
+		});
+
+		app.delete('/consult', async (req, res) => {
+			const _id = new ObjectId(req.query.id);
+			const result = await consultCollection.deleteOne({ _id });
 			res.send(result);
 		});
 	} catch (err) {
