@@ -78,6 +78,14 @@ function run() {
 			res.send(topChefs);
 		});
 
+		// * Recipe relate api
+		app.get('/recipes/recipe/details/:id', async (req, res) => {
+			const id = new ObjectId(req.params.id);
+
+			const result = await recipesCollection.findOne({ _id: id });
+			res.send(result);
+		});
+
 		// * Users related api
 		app.post('/users/user', async (req, res) => {
 			const userData = req.body;
